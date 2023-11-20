@@ -13,7 +13,7 @@ public static void main(String[] args) {
 	Book book1 =new Book(); //prod1이라는 객체를 만든것
 	book1.price = 5000;
 	book1.name = "황금종이";
-	book1.writer = "조정래";
+	book1.writer = "조정래111";
 
 //	Book book1 =new Book(); //prod1이라는 객체를 만든것
 	
