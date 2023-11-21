@@ -37,31 +37,31 @@ public class StringTest {
 		return str1.equals(str2);
 	}
 
-	private void method7() {
-		String str = "0123456789";
-		String start = "";
-		if(str.startsWith(start)) {
-		System.out.println("'" + start +"'로 시작하는 문자열.");
-		}
-		String end = "";
-		if(str.startsWith(end)) {
-			System.out.println("'" + end +"'로 시작하는 문자열.");
-	    }
-		File src = new File("D:\D_setting\A_TeachingMaterial\01_BasicJava\workspace\BasicJava\src);
-		subList(src);
-	}
-	
-	public void subList(File src) {
-		for(File f:src.listFiles()) {
-			if(f.isDriectory()) {
-				subList(f);
-			}
-			if(f.getName().endswith(".java")) {
-			System.out.println("f");
-			System.out.println("자바 파일");
-		
-		
-	}
+//	private void method7() {
+//		String str = "0123456789";
+//		String start = "";
+//		if(str.startsWith(start)) {
+//		System.out.println("'" + start +"'로 시작하는 문자열.");
+//		}
+//		String end = "";
+//		if(str.startsWith(end)) {
+//			System.out.println("'" + end +"'로 시작하는 문자열.");
+//	    }
+//		File src = new File("D:\D_setting\A_TeachingMaterial\01_BasicJava\workspace\BasicJava\src);
+//		subList(src);
+//	}
+//	
+//	public void subList(File src) {
+//		for(File f:src.listFiles()) {
+//			if(f.isDriectory()) {
+//				subList(f);
+//			}
+//			if(f.getName().endswith(".java")) {
+//			System.out.println("f");
+//			System.out.println("자바 파일");
+//		
+//		
+//	}
 	private void method6() {
 		String str = "0123456789";
 //		str = str.substring(3);
