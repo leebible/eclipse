@@ -108,8 +108,9 @@ public class PhonBookTestTeacher {
 		System.out.println("새로운 전화번호 :");
 		String newTel = scan.next();
 		
+		scan.nextLine(); //입력 버퍼 비우기.
 		System.out.println("새로운 주소 :");
-		String newAddr = scan.next();
+		String newAddr = scan.nextLine();
 		
 		//같은 key값에 새로운 전화번호 정보를 저장한다. (수정작업)
 		phoneBookMap.put(name, new Phone(name, newTel, newAddr));
@@ -148,7 +149,7 @@ public class PhonBookTestTeacher {
 		System.out.println();
 		System.out.println("새롭게 등록할 전화번호 정보를 입력하세요.");
 		System.out.print("이 름 :");
-		String name = scan.next();
+		String name = scan.nextLine();
 		
 		//이미 등록된 사람인지 검사
 		if(phoneBookMap.containsKey(name)) {
@@ -157,10 +158,12 @@ public class PhonBookTestTeacher {
 			return; //else{}를 안쓰는대신 return; 을 써주면 됨.
 		}
 		
+		scan.nextLine();
 		System.out.print("전화번호 :");
-		String tel = scan.next();
+		String tel = scan.nextLine();
+		
 		System.out.print("주 소 :");
-		String addr = scan.next();
+		String addr = scan.nextLine();
 		
 		//입력 받은 자료를 이용하여 Phone 객체를 생성하고
 		//생성된 Phone객체를 Map에 추가한다.
@@ -171,9 +174,14 @@ public class PhonBookTestTeacher {
 		phoneBookMap.put(name, new Phone(name,tel,addr));
 		System.out.println("'" + name + "' 전화번호 등록 완료!!!");
 		
-		
-		
 	}
+	/*
+	 Scanner 메서드들의 특징
+	 - next(), nextInt(), nextDouble() .. 
+	   : 사이띄기, Tab키, Enter키를 구분문자로 분리해서 분리된 자료만 읽어간다.
+	 - nextLine() : 한줄 단위로 읽어간다. 
+	      즉, 자료를 입력하고 Enter키를 누르면 Enter키까지 읽어가서 Enter키를 뺀 나머지 데이터를 반환한다.
+	 */
 
 	//메뉴를 출력하고 작업 번호를 입력받아 반환하는 메서드
 	private int displayMenu() {
