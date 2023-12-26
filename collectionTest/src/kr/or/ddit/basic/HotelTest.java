@@ -15,6 +15,19 @@ public class HotelTest {
 	public HotelTest() {
 		scan = new Scanner(System.in);
 		RoomMap = new HashMap<Integer, Room>();
+		/* 선생님이 짜주신 방넘버 생성
+		for(int i=2; i<=4; i++) {
+			String type = null;
+			switch(i) {
+				case 2 : type = "싱글룸"; break;
+				case 3 : type = "더블룸"; break;
+				case 4 : type = "스위트룸"; break;
+			}
+			for(int j=1; j<=9; j++) {
+				int num = i * 100 + j;
+				RoomMap.put(num, new Room(num,type,"-"));
+			}
+		} */
 	}
 
 	public static void main(String[] args) {
