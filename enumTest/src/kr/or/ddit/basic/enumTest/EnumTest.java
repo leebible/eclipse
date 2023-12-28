@@ -68,6 +68,9 @@ public class EnumTest {
 		public String getSpan() {
 			return span;
 		}
+		public int getTemp() {
+			return temp;
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -103,6 +106,36 @@ public class EnumTest {
 		}else {
 			System.out.println("같지 않다");
 		}
+		System.out.println("----------------------------------------");
+		
+		Season ss = Season.valueOf("봄");
+		System.out.println("name : " + ss.name());
+		System.out.println("oridinal : "+ss.ordinal());
+		System.out.println("span :" + ss.getSpan());
+		System.out.println("temp :" + ss.getTemp());
+		System.out.println();
+		
+		//열거형이름. values() 예제
+		for(Season time : Season.values()) {
+			System.out.println(time.name() + "==" + time +
+					" ==> " + time.getSpan() + " : " + time.getTemp());
+		}
+		System.out.println();
+		
+		//열거형을 switch문에서 비교하기
+		//case문에는 '상수명'만 기술해야 한다.
+		switch(mycol) {
+			case RED :
+				System.out.println("빨강입니다.");
+				break;
+			case GREEN :
+				System.out.println("초록입니다.");
+				break;
+			case BLUE :
+				System.out.println("파랑입니다.");
+				break;
+		}
+		
 	}
 }
 
