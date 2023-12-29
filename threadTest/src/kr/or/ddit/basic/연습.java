@@ -12,6 +12,7 @@ public static void main(String[] args) {
 	}
 	
 	bar.set(10, ">");
+	System.out.print("안녕");
 	for(String b : bar) {
 		System.out.print(b);
 	}
